@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="#33ff99"
+    android:fitsSystemWindows="true"
+    app:columnCount="3"
+    app:useDefaultMargins="true"
+    tools:context="com.lewis.lewisframe.activity.MaterialDesignTransitions">
+
+    <Button
+        android:text="普通按钮"
+        />
+
+    <Button
+        android:elevation="33dp"
+        android:text="有高度的"
+        />
+
+    <Button
+        android:background="?android:attr/selectableItemBackground"
+        android:text="涟漪按钮"
+        />
+
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:background="#aaa"
+        android:onClick="circularReveal"
+        android:text="Circular Reveal"
+        app:layout_columnSpan="3"
+        />
+
+    <Button
+        android:text="5.0界面动画"
+        />
+
+    <Button
+        android:onClick="explode"
+        android:text="explode"/>
+
+    <Button
+        android:onClick="slide"
+        android:text="slide"/>
+
+    <Button
+        android:onClick="fade"
+        android:text="fade"/>
+
+    <Button
+        android:onClick="share"
+        android:text="share"/>
+
+    <Button
+        android:id="@+id/fab_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@mipmap/logo"
+        android:elevation="5dp"/>
+
+    <ImageView
+        android:src="@mipmap/logo"
+        app:layout_column="2"
+        app:layout_row="16"/>
+</android.support.v7.widget.GridLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lewis.lewisframe.animation.ToActivity">
+    <include
+        layout="@layout/my_toolbar"
+        />
+
+    <Button
+        android:id="@+id/fab_button"
+        android:layout_width="56dp"
+        android:transitionName="fab"
+        android:layout_height="56dp"
+        android:background="@mipmap/logo"
+        android:elevation="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="@string/hello_blank_fragment"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="144dp"
+        android:id="@+id/textView"/>
+</RelativeLayout>
