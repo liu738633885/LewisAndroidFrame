@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.lewis.lewisframe.activity.IPCActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="一个应用中的多进程--给四大组建添加android:process \n
+        其中lewisframe:xxx属于私有进程,其他应用的组件不可以和他泡在一个进程中 \n
+        lewisframe.xxx属于全局属性,其他应用通过ShareUID的方式可以和它跑在同一个进程中
+       (两个应用通过ShareUID并且签名相同时可以互相访问data目录,组件等信息)
+        "
+        />
+
+</LinearLayout>

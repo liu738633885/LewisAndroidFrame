@@ -1,4 +1,4 @@
-package com.lewis.lewisframe.utils.crashUtils;
+package com.lewis.library.crash;
 
 import android.app.Activity;
 

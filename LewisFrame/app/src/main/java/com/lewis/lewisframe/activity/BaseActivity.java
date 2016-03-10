@@ -10,8 +10,11 @@ import android.view.WindowManager;
 
 import com.lewis.lewisframe.R;
 
+import org.xutils.x;
+
 /**
  * Created by lewis on 16/1/18.
+ * 这个activity实现了沉浸式activity
  */
 public class BaseActivity extends AppCompatActivity {
     @Override
@@ -21,7 +24,9 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     private void initWindow() {
-
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
+            return;
+        }
         Window window = getWindow();
         window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS
                 | WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
@@ -33,16 +38,16 @@ public class BaseActivity extends AppCompatActivity {
         if (android.os.Build.VERSION.SDK_INT >= 21) {
             // 很明显，这两货是新API才有的。
             // window.setStatusBarColor(ContextCompat.getColor(this, R.color.colorAccent));
-            window.setNavigationBarColor(ContextCompat.getColor(this, R.color.colorPrimary));
+            //window.setNavigationBarColor(ContextCompat.getColor(this, R.color.colorPrimary));
 
-            // window.setStatusBarColor(getResources().getColor(R.color.half_transparent));
+             window.setStatusBarColor(ContextCompat.getColor(this,android.R.color.transparent));
             // window.setNavigationBarColor(getResources().getColor(R.color.half_transparent));
 
         } else {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-                window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-                // window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
-            }
+            window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            //底部的控制栏透明
+            //window.addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+
         }
         /*老的用法*/
         /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {

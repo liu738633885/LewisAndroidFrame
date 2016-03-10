@@ -1,0 +1,43 @@
+<com.lewis.lewisframe.widget.CustomSwipeToRefresh
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefresh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="com.lewis.lewisframe.fragment.TouchFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:text="@string/hello_blank_fragment"/>
+            <com.lewis.lewisframe.widget.MyViewPager
+                android:id="@+id/viewpager2"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="#d0ff00"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:text="@string/hello_blank_fragment"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:text="@string/hello_blank_fragment"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:text="@string/hello_blank_fragment"/>
+        </LinearLayout>
+    </ScrollView>
+
+</com.lewis.lewisframe.widget.CustomSwipeToRefresh>

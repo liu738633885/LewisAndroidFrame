@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.PictureActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#333"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f56"
+            android:text="000"/>
+
+        <Button
+            android:id="@+id/btn_openCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="myOnClick"
+            android:text="照相(没有指定存储位置)"/>
+        <Button
+            android:id="@+id/btn_openCamera2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="myOnClick"
+            android:text="照相(指定存储位置)"/>
+
+        <Button
+            android:id="@+id/btn_open_photo_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="myOnClick"
+            android:text="调用photoPicker打开相册"/>
+
+        <Button
+            android:id="@+id/btn_openAlbum1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="myOnClick"
+            android:text="打开相册"/>
+
+        <Button
+            android:id="@+id/btn_openAlbum2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="myOnClick"
+            android:text="打开相册(新)"/>
+
+        <EditText
+            android:id="@+id/edt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="默认的文字"
+            />
+
+        <ImageView
+            android:id="@+id/imv"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:onClick="myOnClick"/>
+
+        <ImageView
+            android:id="@+id/imv2"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:onClick="myOnClick"/>
+
+
+    </LinearLayout>
+
+
+</ScrollView>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.lewis.lewisframe"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.lewis.lewisframe">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
@@ -15,15 +15,46 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.MainActivity">
+        </activity>
+        <activity android:name=".animation.MaterialDesignAnimation">
+        </activity>
+        <activity android:name=".animation.ToActivity">
+        </activity>
+        <activity
+            android:name=".activity.HomeActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".recyclerview.RecyclerViewActivity">
+        </activity>
+        <activity
+            android:name=".activity.PictureActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+        <activity
+            android:name="me.iwf.photopicker.PhotoPickerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="nosensor"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <!-- 相机界面注册的activity -->
+        <activity
+            android:name="me.iwf.photopicker.PhotoPagerActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".activity.TouchActivity">
+        </activity>
+        <activity android:name=".activity.IPCActivity">
+        </activity>
+        <activity android:name=".activity.IPC2Activity">
+
+        </activity>
+        <activity android:name=".activity.CustomViewActivit">
+
+        </activity>
+        <activity android:name=".activity.AIDLActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity android:name=".animation.MaterialDesignAnimation">
-        </activity>
-        <activity android:name=".animation.ToActivity">
         </activity>
     </application>
 

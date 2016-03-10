@@ -1,4 +1,4 @@
-package com.lewis.lewisframe.utils.crashUtils;
+package com.lewis.library.crash;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
@@ -27,6 +27,7 @@ import java.util.TimeZone;
 
 /**
  * Created by lewis on 16/1/6.
+ *
  */
 public class CrashHandler implements UncaughtExceptionHandler {
     private static final String TAG = "CrashHandler";
