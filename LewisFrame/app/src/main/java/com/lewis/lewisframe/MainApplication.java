@@ -4,6 +4,7 @@ import android.app.Application;
 
 
 import com.lewis.library.crash.CrashHandler;
+import com.squareup.leakcanary.LeakCanary;
 
 import org.xutils.x;
 
@@ -24,6 +25,8 @@ public class MainApplication extends Application {
 
         x.Ext.init(this);
         x.Ext.setDebug(true);
+
+        LeakCanary.install(this);
     }
 
     public static MainApplication getInstance() {

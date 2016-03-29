@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.lewis.lewisframe">
+    package="com.lewis.lewisframe">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <!-- To access Google+ APIs: -->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".MainApplication"
@@ -14,47 +14,51 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity">
-        </activity>
-        <activity android:name=".animation.MaterialDesignAnimation">
-        </activity>
-        <activity android:name=".animation.ToActivity">
-        </activity>
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".animation.MaterialDesignAnimation" />
+        <activity android:name=".animation.ToActivity" />
         <activity
             android:name=".activity.HomeActivity"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".recyclerview.RecyclerViewActivity">
-        </activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".recyclerview.RecyclerViewActivity" />
         <activity
             android:name=".activity.PictureActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize">
-        </activity>
+            android:configChanges="orientation|keyboardHidden|screenSize" />
         <activity
             android:name="me.iwf.photopicker.PhotoPickerActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="nosensor"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <!-- 相机界面注册的activity -->
         <activity
             android:name="me.iwf.photopicker.PhotoPagerActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
-        <activity android:name=".activity.TouchActivity">
-        </activity>
-        <activity android:name=".activity.IPCActivity">
-        </activity>
-        <activity android:name=".activity.IPC2Activity">
-
-        </activity>
-        <activity android:name=".activity.CustomViewActivit">
-
-        </activity>
-        <activity android:name=".activity.AIDLActivity">
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".activity.TouchActivity" />
+        <activity android:name=".activity.IPCActivity" />
+        <activity android:name=".activity.IPC2Activity" />
+        <activity android:name=".activity.CustomViewActivit" />
+        <activity android:name=".activity.AIDLActivity" />
+        <activity android:name=".broadcast.BroadcastActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+
+        <receiver android:name=".broadcast.BC1">
+            <intent-filter>
+                <action android:name="BC1" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".broadcast.SendBroadcastService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".activity.RoundBitmapActivity">
         </activity>
     </application>
 
