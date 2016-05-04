@@ -1,4 +1,4 @@
-package com.lewis.lewisframe.activity;
+package com.lewis.lewisframe.ipc;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

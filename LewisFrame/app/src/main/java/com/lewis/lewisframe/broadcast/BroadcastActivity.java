@@ -11,8 +11,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.lewis.lewisframe.R;
-import com.lewis.lewisframe.activity.AIDLActivity;
-import com.lewis.lewisframe.activity.RoundBitmapActivity;
+import com.lewis.lewisframe.ipc.aidl.AIDLActivity;
 
 public class BroadcastActivity extends AppCompatActivity {
 

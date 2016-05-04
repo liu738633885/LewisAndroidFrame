@@ -7,6 +7,14 @@
     <!-- To access Google+ APIs: -->
     <uses-permission android:name="android.permission.INTERNET" />
 
+
+
+    <!--Umeng-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
     <application
         android:name=".MainApplication"
         android:allowBackup="true"
@@ -34,17 +42,11 @@
             android:name="me.iwf.photopicker.PhotoPagerActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".activity.TouchActivity" />
-        <activity android:name=".activity.IPCActivity" />
-        <activity android:name=".activity.IPC2Activity" />
+        <activity android:name=".ipc.IPCActivity" />
+        <activity android:name=".ipc.IPC2Activity" />
         <activity android:name=".activity.CustomViewActivit" />
-        <activity android:name=".activity.AIDLActivity" />
+        <activity android:name=".ipc.aidl.AIDLActivity" />
         <activity android:name=".broadcast.BroadcastActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
         </activity>
 
         <receiver android:name=".broadcast.BC1">
@@ -58,8 +60,18 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".activity.RoundBitmapActivity">
+        <activity android:name=".activity.RoundBitmapActivity"/>
+        <activity android:name=".imageloader.ImageLoaderActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
         </activity>
+
+        <meta-data android:value="5720e1c0e0f55a2b69002874" android:name="UMENG_APPKEY"/>
+        <meta-data android:value="${UMENG_CHANNEL_VALUE}" android:name="UMENG_CHANNEL"/>
     </application>
 
 </manifest>

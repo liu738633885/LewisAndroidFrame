@@ -1,4 +1,4 @@
-package com.lewis.lewisframe.activity;
+package com.lewis.lewisframe.ipc.aidl;
 
 import android.content.ComponentName;
 import android.content.Context;

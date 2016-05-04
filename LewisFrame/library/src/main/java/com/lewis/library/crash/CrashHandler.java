@@ -173,7 +173,11 @@ public class CrashHandler implements UncaughtExceptionHandler {
 
         //cpu架构
         pw.print("CPU ABI: ");
-        pw.println(Build.CPU_ABI);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            pw.println(Build.SUPPORTED_ABIS);
+        }else {
+            pw.println(Build.CPU_ABI);
+        }
     }
 
     private void uploadExceptionToServer() {

@@ -1,8 +1,14 @@
 package com.lewis.lewisframe;
 
 import android.app.Application;
+import android.content.Context;
+import android.graphics.Point;
+import android.view.Display;
+import android.view.WindowManager;
+import android.widget.Toast;
 
 
+import com.lewis.lewisframe.utils.DisplayUtil;
 import com.lewis.library.crash.CrashHandler;
 import com.squareup.leakcanary.LeakCanary;
 
